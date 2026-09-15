@@ -14,7 +14,7 @@ import {
   ReferenceLine,
   CartesianGrid
 } from 'recharts';
-import { Sliders, TrendingUp, AlertCircle, CheckCircle } from 'lucide-react';
+import { Sliders, CheckCircle } from 'lucide-react';
 
 export function ForecastTab({
   productionHistory,
@@ -26,7 +26,7 @@ export function ForecastTab({
   simOvertime,
   setSimOvertime
 }) {
-  const { rows, totalSimTonnage, tonnageDelta, simRisks, baseRisks, threshold, isSimActive } = simData;
+  const { rows, tonnageDelta, simRisks, baseRisks, threshold, isSimActive } = simData;
 
   // Prepare chart data: combine past 6 historical months with forward 6 forecast months
   const pastSlice = productionHistory.slice(-6).map((r) => ({

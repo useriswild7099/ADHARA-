@@ -10,8 +10,6 @@ const Slider = React.forwardRef(
       if (onValueChange) onValueChange([num])
     }
 
-    const percentage = ((val - min) / (max - min)) * 100
-
     return (
       <div className={cn("relative flex w-full touch-none select-none items-center py-2", className)}>
         <input

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function VisorReticle({ activeTarget }) {
+export function VisorReticle() {
   return (
     <>
       {/* Rotating Azimuth Bearing Dial */}

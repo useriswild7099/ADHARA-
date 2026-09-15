@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
-import { AlertOctagon, CheckCircle2, ShieldAlert, Wrench, CloudRain, Zap } from 'lucide-react';
+import { AlertOctagon, CheckCircle2, Wrench, CloudRain } from 'lucide-react';
 
 export function PlaybookTab({ simData }) {
   const { rows, simRisks, threshold } = simData;

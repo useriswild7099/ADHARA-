@@ -3,9 +3,8 @@ import { GlobeStage } from './GlobeStage';
 import { SatelliteStage } from './SatelliteStage';
 import { VisorReticle } from './VisorReticle';
 import { FlirOverlay } from './FlirOverlay';
-import { Button } from '../ui/button';
 import { Badge } from '../ui/badge';
-import { Globe, Map, Eye, Layers, Compass, Crosshair } from 'lucide-react';
+import { Globe, Map, Layers, Crosshair } from 'lucide-react';
 
 export function GodsEyeVisor({
   mines,

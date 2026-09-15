@@ -4,7 +4,7 @@ import { TrendingUp, AlertTriangle, Crosshair, ShieldCheck } from 'lucide-react'
 
 export function KpiRibbon({ simData, highYieldCount, totalCells, metrics }) {
   const { totalSimTonnage, tonnageDelta, simRisks, baseRisks, isSimActive } = simData;
-  const { roc_auc, test_accuracy, error_reduction_pct } = metrics.prospectivity;
+  const { roc_auc, test_accuracy } = metrics.prospectivity;
 
   const pctCoverage = ((highYieldCount / totalCells) * 100).toFixed(1);
 

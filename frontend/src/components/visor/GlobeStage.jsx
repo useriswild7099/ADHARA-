@@ -15,8 +15,6 @@ export function GlobeStage({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    let globe = null;
-
     try {
       const rect = containerRef.current.getBoundingClientRect();
       const w = Math.round(rect.width) || 560;
@@ -31,7 +29,7 @@ export function GlobeStage({
         color: () => m.color || '#38bdf8'
       }));
 
-      globe = Globe()(containerRef.current)
+      const globe = Globe()(containerRef.current)
         .width(w)
         .height(h)
         .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
@@ -114,7 +112,7 @@ export function GlobeStage({
       if (globeInstanceRef.current) {
         try {
           globeInstanceRef.current._destructor?.();
-        } catch (e) {
+        } catch {
           // ignore destructor cleanup edge cases
         }
         globeInstanceRef.current = null;
@@ -148,7 +146,7 @@ export function GlobeStage({
           globeInstanceRef.current.pauseAnimation();
         }
       }
-    } catch (e) {
+    } catch {
       // guard
     }
   }, [isActive]);

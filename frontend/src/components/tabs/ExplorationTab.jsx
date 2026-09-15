@@ -1,7 +1,7 @@
 import React from 'react';
 import { GodsEyeVisor } from '../visor/GodsEyeVisor';
 import { Card } from '../ui/card';
-import { Info, Satellite, Cpu, MapPin } from 'lucide-react';
+import { Info, Satellite, MapPin } from 'lucide-react';
 
 export function ExplorationTab({
   mines,

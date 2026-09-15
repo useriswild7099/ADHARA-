@@ -68,7 +68,7 @@ export function SatelliteStage({
       if (mapInstanceRef.current) {
         try {
           mapInstanceRef.current.remove();
-        } catch (e) {
+        } catch {
           // ignore cleanup errors
         }
         mapInstanceRef.current = null;
@@ -118,8 +118,8 @@ export function SatelliteStage({
 
     // Filter locations matching active sensor layer
     let selectedCells = [];
-    let metaTitle = '';
-    let metaRange = '';
+    let metaTitle;
+    let metaRange;
 
     if (activeLayer === 'ore') {
       selectedCells = [...gridData]
@@ -187,9 +187,9 @@ export function SatelliteStage({
           const targetLat = Number((centerLat + (pt.y - 15) * scale).toFixed(5));
           const targetLon = Number((centerLon + (pt.x - 15) * scale).toFixed(5));
 
-          let color = '#ef4444';
-          let radius = 6;
-          let valLabel = '';
+          let color;
+          let radius;
+          let valLabel;
           let rankBadge = `#${rank + 1}`;
 
           if (activeLayer === 'ore') {

@@ -3,7 +3,7 @@ import { Card } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Table, TableHeader, TableBody, TableHead, TableRow, TableCell } from '../ui/table';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
-import { ShieldCheck, BarChart3, Database, FileCode } from 'lucide-react';
+import { ShieldCheck, BarChart3 } from 'lucide-react';
 
 export function ValidationTab({ metrics }) {
   const { roc_auc, test_accuracy, precision, f1_score, features } = metrics.prospectivity;
