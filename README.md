@@ -2,6 +2,20 @@
 ### Critical Mineral Exploration, Pit Dynamics Tracking & Causal Shortfall Forecasting
 **Project Code:** SIH26009 | **Organization:** MOIL Limited (Ministry of Steel, Govt. of India)  
 **Domain:** Space Technology & Geospatial Artificial Intelligence  
+**Live Production URL:** [https://adhara-seven.vercel.app/](https://adhara-seven.vercel.app/) | **Repository:** [github.com/useriswild7099/ADHARA-](https://github.com/useriswild7099/ADHARA-)
+
+[![Deploy with Vercel](https://vercelbadge.vercel.app/api/useriswild7099/ADHARA-)](https://adhara-seven.vercel.app/)
+[![License: Proprietary](https://img.shields.io/badge/License-MOIL%20SIH26009-blue.svg)](https://github.com/useriswild7099/ADHARA-)
+[![Platform: WebGL%20%7C%20Three.js](https://img.shields.io/badge/Engine-WebGL%20%7C%20Three.js-00d4ff.svg)](https://adhara-seven.vercel.app/)
+[![Mobile: Responsive](https://img.shields.io/badge/Mobile-100%25%20Fluid%20HUD-emerald.svg)](https://adhara-seven.vercel.app/)
+
+<div align="center">
+  <a href="https://adhara-seven.vercel.app/">
+    <img src="qr_code.png" width="170" alt="ADHARA Live Vercel Web App QR Code" style="border-radius: 12px; margin: 12px 0;" />
+  </a>
+  <br />
+  <sub><b>Scan with your mobile camera to launch the live tactical cockpit instantly on Vercel (<a href="https://adhara-seven.vercel.app/">adhara-seven.vercel.app</a>)</b></sub>
+</div>
 
 ---
 
