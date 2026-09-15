@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/yamadashy/repomix/main/repomix.config.json",
+  "output": {
+    "filePath": "repomix-project-context.xml",
+    "style": "xml",
+    "parsableStyle": true,
+    "fileSummary": true,
+    "directoryStructure": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "showLineNumbers": true,
+    "topFilesLength": 10,
+    "headerText": "MOIL Remote Sensing & Production Optimization Platform (SIH26009) - Complete Project Architecture, ML Pipelines & Frontend Source"
+  },
+  "include": [
+    "claude/**/*",
+    "frontend/src/**/*",
+    "frontend/index.html",
+    "frontend/package.json",
+    "frontend/vite.config.js",
+    "frontend/tailwind.config.js",
+    "frontend/tsconfig.json",
+    "research findings/**/*",
+    ".agents/skills/**/*",
+    "claude skills and resources/SKILL.md",
+    "claude skills and resources/RESOURCES.md",
+    "*.md",
+    "download_repos.py"
+  ],
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/.git/**",
+      "**/__pycache__/**",
+      "**/.streamlit/**",
+      "reference_repos/**",
+      "skills use when necesarry/**",
+      "claude skills and resources/mnt/**",
+      "*.zip",
+      "*.pdf",
+      "*.exe",
+      "*.winmd",
+      "**/*.pkl",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.jpeg",
+      "**/*.svg",
+      "**/*.ico",
+      "package-lock.json",
+      "**/package-lock.json",
+      "claude/grid_data.csv",
+      "claude/grid_predictions.csv",
+      "claude/pit_change_detection.csv",
+      "frontend/src/data/gridData.json",
+      "repomix-output.*",
+      "repomix-project-context.*"
+    ]
+  },
+  "security": {
+    "enableSecurityCheck": true
+  }
+}

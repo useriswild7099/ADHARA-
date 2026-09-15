@@ -1,0 +1,56 @@
+[
+  {
+    "month": 31,
+    "actual": 2401.0,
+    "baseline_forecast": 3429.0,
+    "arima_forecast": 3459.0,
+    "regression_forecast": 2395.0,
+    "shortfall_risk": true,
+    "likely_cause": "High rainfall"
+  },
+  {
+    "month": 32,
+    "actual": 2919.0,
+    "baseline_forecast": 3417.0,
+    "arima_forecast": 3430.0,
+    "regression_forecast": 3055.0,
+    "shortfall_risk": true,
+    "likely_cause": "High rainfall"
+  },
+  {
+    "month": 33,
+    "actual": 2855.0,
+    "baseline_forecast": 3405.0,
+    "arima_forecast": 3450.0,
+    "regression_forecast": 2917.0,
+    "shortfall_risk": true,
+    "likely_cause": "High rainfall"
+  },
+  {
+    "month": 34,
+    "actual": 3663.0,
+    "baseline_forecast": 3393.0,
+    "arima_forecast": 3436.0,
+    "regression_forecast": 3834.0,
+    "shortfall_risk": false,
+    "likely_cause": "-"
+  },
+  {
+    "month": 35,
+    "actual": 3806.0,
+    "baseline_forecast": 3381.0,
+    "arima_forecast": 3446.0,
+    "regression_forecast": 3822.0,
+    "shortfall_risk": false,
+    "likely_cause": "-"
+  },
+  {
+    "month": 36,
+    "actual": 3762.0,
+    "baseline_forecast": 3369.0,
+    "arima_forecast": 3439.0,
+    "regression_forecast": 3853.0,
+    "shortfall_risk": false,
+    "likely_cause": "-"
+  }
+]

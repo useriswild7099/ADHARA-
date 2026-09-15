@@ -1,0 +1,218 @@
+[
+  {
+    "month": 1,
+    "rainfall_mm": 4.6,
+    "downtime_hours": 24.0,
+    "production_tons": 3777.0
+  },
+  {
+    "month": 2,
+    "rainfall_mm": 12.6,
+    "downtime_hours": 25.0,
+    "production_tons": 3607.0
+  },
+  {
+    "month": 3,
+    "rainfall_mm": 9.0,
+    "downtime_hours": 21.0,
+    "production_tons": 3756.0
+  },
+  {
+    "month": 4,
+    "rainfall_mm": 1.5,
+    "downtime_hours": 26.0,
+    "production_tons": 3759.0
+  },
+  {
+    "month": 5,
+    "rainfall_mm": 80.3,
+    "downtime_hours": 24.0,
+    "production_tons": 3541.0
+  },
+  {
+    "month": 6,
+    "rainfall_mm": 227.4,
+    "downtime_hours": 23.0,
+    "production_tons": 3110.0
+  },
+  {
+    "month": 7,
+    "rainfall_mm": 282.4,
+    "downtime_hours": 16.0,
+    "production_tons": 3019.0
+  },
+  {
+    "month": 8,
+    "rainfall_mm": 132.7,
+    "downtime_hours": 18.0,
+    "production_tons": 3506.0
+  },
+  {
+    "month": 9,
+    "rainfall_mm": 343.5,
+    "downtime_hours": 24.0,
+    "production_tons": 2865.0
+  },
+  {
+    "month": 10,
+    "rainfall_mm": 39.7,
+    "downtime_hours": 21.0,
+    "production_tons": 3648.0
+  },
+  {
+    "month": 11,
+    "rainfall_mm": 7.2,
+    "downtime_hours": 59.0,
+    "production_tons": 3386.0
+  },
+  {
+    "month": 12,
+    "rainfall_mm": 28.5,
+    "downtime_hours": 22.0,
+    "production_tons": 3634.0
+  },
+  {
+    "month": 13,
+    "rainfall_mm": 34.4,
+    "downtime_hours": 29.0,
+    "production_tons": 3616.0
+  },
+  {
+    "month": 14,
+    "rainfall_mm": 12.9,
+    "downtime_hours": 20.0,
+    "production_tons": 3766.0
+  },
+  {
+    "month": 15,
+    "rainfall_mm": 1.2,
+    "downtime_hours": 23.0,
+    "production_tons": 3735.0
+  },
+  {
+    "month": 16,
+    "rainfall_mm": 0.6,
+    "downtime_hours": 17.0,
+    "production_tons": 3733.0
+  },
+  {
+    "month": 17,
+    "rainfall_mm": 7.4,
+    "downtime_hours": 22.0,
+    "production_tons": 3756.0
+  },
+  {
+    "month": 18,
+    "rainfall_mm": 159.6,
+    "downtime_hours": 15.0,
+    "production_tons": 3419.0
+  },
+  {
+    "month": 19,
+    "rainfall_mm": 505.3,
+    "downtime_hours": 19.0,
+    "production_tons": 2392.0
+  },
+  {
+    "month": 20,
+    "rainfall_mm": 484.2,
+    "downtime_hours": 25.0,
+    "production_tons": 2292.0
+  },
+  {
+    "month": 21,
+    "rainfall_mm": 306.0,
+    "downtime_hours": 21.0,
+    "production_tons": 2873.0
+  },
+  {
+    "month": 22,
+    "rainfall_mm": 87.1,
+    "downtime_hours": 31.0,
+    "production_tons": 3398.0
+  },
+  {
+    "month": 23,
+    "rainfall_mm": 0.0,
+    "downtime_hours": 60.0,
+    "production_tons": 3517.0
+  },
+  {
+    "month": 24,
+    "rainfall_mm": 1.9,
+    "downtime_hours": 15.0,
+    "production_tons": 3789.0
+  },
+  {
+    "month": 25,
+    "rainfall_mm": 0.9,
+    "downtime_hours": 17.0,
+    "production_tons": 3919.0
+  },
+  {
+    "month": 26,
+    "rainfall_mm": 0.0,
+    "downtime_hours": 21.0,
+    "production_tons": 3653.0
+  },
+  {
+    "month": 27,
+    "rainfall_mm": 36.6,
+    "downtime_hours": 18.0,
+    "production_tons": 3710.0
+  },
+  {
+    "month": 28,
+    "rainfall_mm": 78.9,
+    "downtime_hours": 12.0,
+    "production_tons": 3697.0
+  },
+  {
+    "month": 29,
+    "rainfall_mm": 31.6,
+    "downtime_hours": 22.0,
+    "production_tons": 3748.0
+  },
+  {
+    "month": 30,
+    "rainfall_mm": 243.9,
+    "downtime_hours": 15.0,
+    "production_tons": 3418.0
+  },
+  {
+    "month": 31,
+    "rainfall_mm": 392.8,
+    "downtime_hours": 57.0,
+    "production_tons": 2401.0
+  },
+  {
+    "month": 32,
+    "rainfall_mm": 254.8,
+    "downtime_hours": 27.0,
+    "production_tons": 2919.0
+  },
+  {
+    "month": 33,
+    "rainfall_mm": 311.7,
+    "downtime_hours": 25.0,
+    "production_tons": 2855.0
+  },
+  {
+    "month": 34,
+    "rainfall_mm": 5.0,
+    "downtime_hours": 18.0,
+    "production_tons": 3663.0
+  },
+  {
+    "month": 35,
+    "rainfall_mm": 30.0,
+    "downtime_hours": 12.0,
+    "production_tons": 3806.0
+  },
+  {
+    "month": 36,
+    "rainfall_mm": 19.5,
+    "downtime_hours": 12.0,
+    "production_tons": 3762.0
+  }
+]

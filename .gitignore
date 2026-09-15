@@ -1,0 +1,70 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# Production Builds
+dist/
+**/dist/
+build/
+**/build/
+.next/
+out/
+
+# Python & Environment
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit Cache & Local Config
+.streamlit/secrets.toml
+
+# Environment & Sensitive Keys
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# External Third-Party References & Skill Archives
+reference_repos/
+skills use when necesarry/
+ui-ux-pro-max-skill-main/
+claude skills and resources/
+
+# Compressed Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Repomix & Context Dumps
+repomix-project-context.xml
+repomix-output.*
+*.pdf
+
+# IDE & OS System Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

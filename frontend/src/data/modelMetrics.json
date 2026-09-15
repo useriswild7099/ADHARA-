@@ -1,0 +1,46 @@
+{
+  "prospectivity": {
+    "roc_auc": 0.9966,
+    "test_accuracy": 97.22,
+    "precision": 92.31,
+    "f1_score": 0.9057,
+    "trees": 200,
+    "features": [
+      {
+        "name": "AlphaEarth 64-D Similarity",
+        "contribution": 26.98
+      },
+      {
+        "name": "NDVI (Chlorophyll Stress)",
+        "contribution": 24.35
+      },
+      {
+        "name": "Land Surface Temp (\u00b0C)",
+        "contribution": 18.4
+      },
+      {
+        "name": "Soil Moisture Proxy",
+        "contribution": 12.48
+      },
+      {
+        "name": "SAR Radar Backscatter (ae_2)",
+        "contribution": 4.14
+      },
+      {
+        "name": "Thermal Inertia (ae_1)",
+        "contribution": 2.87
+      }
+    ]
+  },
+  "forecasting": {
+    "baseline_mae": 527.0,
+    "arima_mae": 512.0,
+    "model_mae": 80.0,
+    "error_reduction_pct": 84.8,
+    "safe_threshold_tons": 3150,
+    "coef_month": 2.02,
+    "coef_rainfall": -2.78,
+    "coef_downtime": -9.15,
+    "intercept": 3944.12
+  }
+}

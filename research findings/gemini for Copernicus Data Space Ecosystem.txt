@@ -1,0 +1,32 @@
+The Copernicus Data Space Ecosystem (Sentinel Hub) provides direct access to raw, uncompressed, and highly frequent Sentinel-2 multi-spectral satellite imagery. For MOIL Limited’s challenge, this platform serves as the fundamental data engine for calculating custom geological and environmental metrics from scratch, offering complete control over the mathematical indices fed into your AI models.
+
+Because Sentinel-2 captures 13 distinct spectral bands (from visible light to short-wave infrared) with a rapid 5-day revisit time, it is uniquely suited to address both the long-term geological mapping and the short-term operational monitoring required by the problem statement.
+
+### 1. Identifying Manganese Reserves via Custom Spectral Band Math
+
+Manganese deposits in the Sausar Belt (MOIL's primary operating region) do not exist in isolation; they are geologically associated with specific weathering profiles, iron oxides (gossans), and hydrothermal clay alterations. By using raw Sentinel-2 data, your solution can apply customized band math to isolate these surface indicators.
+
+* **Iron Oxide Mapping (Band 4 / Band 3):** Weathered manganese and iron-rich rocks present distinct spectral signatures. By dividing the Red band by the Green band, you can highlight oxidized lithological boundaries that correlate with sub-surface manganese reserves.
+* **Clay Alteration Halos (Band 11 / Band 12):** Manganese mineralization is often surrounded by specific clay alterations. Sentinel-2’s Short-Wave Infrared (SWIR) bands are highly sensitive to these minerals. Calculating the SWIR1/SWIR2 ratio allows you to map potential drilling targets.
+* **Structural Geology Extraction:** Raw multi-spectral data can be processed through edge-detection algorithms to map lineaments, faults, and folds. Since manganese deposits are structurally controlled, combining these structural maps with MOIL's existing manual survey data gives the AI a powerful feature set to predict unexplored reserves.
+
+### 2. Predicting Production Shortfalls with High-Frequency Monitoring
+
+The problem statement requires predicting shortfalls caused by environmental constraints like soil moisture and weather. The 5-day revisit frequency of Sentinel-2 allows your system to monitor dynamic, fast-changing conditions on the ground that static maps cannot capture.
+
+* **Dynamic Soil Moisture Tracking (NDMI):** The Normalized Difference Moisture Index (using Band 8A and Band 11) tracks the exact saturation levels of the soil. If your AI detects a sudden spike in NDMI across a specific open-cast pit, it can instantly predict that haul trucks will face traction issues or that drill holes are too waterlogged for efficient blasting.
+* **Pit Flooding Monitoring (NDWI):** Using the Normalized Difference Water Index, the system can monitor standing water accumulation at the bottom of active mine pits after heavy rainfall, generating automated alerts before machinery gets bogged down.
+* **Vegetation Pre-stripping Verification (NDVI):** Before a mining block can be drilled, the surface vegetation must be cleared. By continuously calculating the Normalized Difference Vegetation Index over planned expansion zones, your dashboard can track whether clearing operations are on schedule. If NDVI remains high in a block slated for immediate production, the AI flags an imminent shortfall.
+
+### 3. Lightweight Dashboard Integration via Sentinel Hub APIs
+
+The expected solution must be a user-friendly dashboard. Processing petabytes of raw satellite imagery locally is computationally impossible for a web application. Sentinel Hub solves this through its cloud-based processing APIs.
+
+* **Evalscripts and On-the-Fly Processing:** Instead of downloading heavy satellite tiles, your dashboard backend sends an "Evalscript" (a small snippet of JavaScript defining your band math) and a geographic bounding box (the mine lease area) to Sentinel Hub. The Copernicus servers process the raw data instantly and return only the lightweight, color-coded map layer (e.g., a moisture heatmap) directly to your web frontend.
+* **Statistical API for AI Integration:** For the AI/ML component, you do not necessarily need images; you need numerical time-series data. The Statistical API allows you to request the mean moisture, vegetation, and temperature values of a specific mine pit over the last five years. This returns a clean JSON payload that can be directly ingested into an XGBoost, Random Forest, or LSTM model to forecast production dips.
+
+### 4. Generating Prescriptive Corrective Actions
+
+Because you are extracting raw numerical indices (moisture severity, precise location of waterlogging, un-cleared vegetation zones), your AI model can map these constraints to MOIL's operational logistics to suggest corrective steps.
+
+If the Sentinel data reveals that the western benches of a pit have reached a critical soil moisture threshold while the eastern benches remain dry, the AI logic can automatically trigger a recommendation on the dashboard to immediately re-deploy heavy earth-moving equipment and blasting crews to the eastern face, ensuring continuous ore availability and preventing a drop in overall daily production.
