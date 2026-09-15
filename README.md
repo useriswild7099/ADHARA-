@@ -337,6 +337,16 @@ npm run build
 ```
 Build output is generated in `frontend/dist/`. Code-splitting parameters in `vite.config.js` ensure vendor libraries (`three.js`, `leaflet`, `recharts`) are compartmentalized into isolated chunk packages to guarantee sub-second initial page loads.
 
+### 3. Vercel Cloud Deployment (Zero Configuration)
+The repository is pre-configured for automated Vercel deployment with root `vercel.json` and monorepo `package.json`.
+
+#### Direct Deploy Steps:
+1. Push code to GitHub: `https://github.com/useriswild7099/ADHARA-`
+2. Open your [Vercel Dashboard](https://vercel.com/dashboard) and select **"Add New Project"**.
+3. Import the repository **`useriswild7099/ADHARA-`**.
+4. **No manual build configuration is required**: Vercel automatically detects `vercel.json`, compiles `frontend/`, outputs to `frontend/dist/`, and configures SPA catch-all routing to `/index.html`.
+5. Click **"Deploy"** — the live platform deploys immediately with global edge CDN distribution and automatic SSL.
+
 ---
 
 ## Quality Assurance, Performance & Verification

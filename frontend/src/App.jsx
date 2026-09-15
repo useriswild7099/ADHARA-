@@ -3,6 +3,7 @@ import { HeaderBar } from './components/layout/HeaderBar';
 import { KpiRibbon } from './components/layout/KpiRibbon';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/ui/tabs';
 import { runSimulation } from './lib/simulator';
+import { Satellite, TrendingUp, BookOpen, ShieldCheck } from 'lucide-react';
 
 // Lazy-loaded Tab Modules for Optimal Bundle Splitting
 const ExplorationTab = lazy(() =>
@@ -60,7 +61,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col justify-between p-3 sm:p-6 max-w-7xl mx-auto font-sans">
+    <div className="min-h-screen bg-background text-foreground flex flex-col justify-between p-2.5 sm:p-5 md:p-6 max-w-7xl mx-auto font-sans">
       <div>
         {/* Executive Header Bar */}
         <HeaderBar
@@ -79,19 +80,27 @@ export default function App() {
 
         {/* Main Interface Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <div className="overflow-x-auto pb-1">
-            <TabsList className="w-full sm:w-auto flex">
-              <TabsTrigger value="exploration" className="gap-2">
-                Exploration & Satellite Recon (Module 1)
+          <div className="overflow-x-auto pb-1.5 touch-scroll">
+            <TabsList className="w-full sm:w-auto flex min-w-max gap-1">
+              <TabsTrigger value="exploration" className="gap-1.5 py-2 px-3 text-xs">
+                <Satellite className="h-3.5 w-3.5 text-primary" />
+                <span>Exploration</span>
+                <span className="hidden md:inline">& Satellite Recon (M1)</span>
               </TabsTrigger>
-              <TabsTrigger value="forecast" className="gap-2">
-                Production Forecast & Simulator (Module 2)
+              <TabsTrigger value="forecast" className="gap-1.5 py-2 px-3 text-xs">
+                <TrendingUp className="h-3.5 w-3.5 text-emerald-400" />
+                <span>Forecast</span>
+                <span className="hidden md:inline">& Simulator (M2)</span>
               </TabsTrigger>
-              <TabsTrigger value="playbook" className="gap-2">
-                Operational Playbook (Module 3)
+              <TabsTrigger value="playbook" className="gap-1.5 py-2 px-3 text-xs">
+                <BookOpen className="h-3.5 w-3.5 text-amber-400" />
+                <span>Playbook</span>
+                <span className="hidden md:inline">(Module 3)</span>
               </TabsTrigger>
-              <TabsTrigger value="validation" className="gap-2">
-                Methodological Validation
+              <TabsTrigger value="validation" className="gap-1.5 py-2 px-3 text-xs">
+                <ShieldCheck className="h-3.5 w-3.5 text-purple-400" />
+                <span>Validation</span>
+                <span className="hidden md:inline">Rigor</span>
               </TabsTrigger>
             </TabsList>
           </div>
@@ -131,11 +140,11 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="mt-12 pt-5 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-muted-foreground gap-3">
+      <footer className="mt-8 sm:mt-12 pt-4 sm:pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs font-mono text-muted-foreground gap-3 text-center sm:text-left">
         <div>
-          MOIL Limited Remote Sensing & Production Optimization Platform | Problem Statement: SIH26009
+          MOIL Limited Remote Sensing & Production Optimization Platform | SIH26009
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <span className="text-emerald-400">GEE AlphaEarth 64-D Synced</span>
           <span className="text-sky-400">NASA POWER Precipitation Connected</span>
         </div>

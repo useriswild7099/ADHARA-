@@ -32,8 +32,8 @@ export function VisorReticle({ activeTarget }) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-dotted border-sky-400/20 pointer-events-none z-12" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-dotted border-sky-400/15 pointer-events-none z-12" />
 
-      {/* Flanking Speed & Altitude Rims */}
-      <div className="hidden sm:flex absolute top-1/4 bottom-1/4 -left-12 flex-col justify-between text-[8px] font-mono text-white/40 border-r border-sky-400/30 pr-1.5 pointer-events-none z-25 text-right">
+      {/* Flanking Speed & Altitude Rims - visible on large screens with ample margins */}
+      <div className="hidden lg:flex absolute top-1/4 bottom-1/4 -left-12 flex-col justify-between text-[8px] font-mono text-white/40 border-r border-sky-400/30 pr-1.5 pointer-events-none z-25 text-right">
         <span>100%</span>
         <span>80%</span>
         <span>60%</span>
@@ -45,7 +45,7 @@ export function VisorReticle({ activeTarget }) {
         </div>
       </div>
 
-      <div className="hidden sm:flex absolute top-1/4 bottom-1/4 -right-12 flex-col justify-between text-[8px] font-mono text-white/40 border-l border-sky-400/30 pl-1.5 pointer-events-none z-25 text-left">
+      <div className="hidden lg:flex absolute top-1/4 bottom-1/4 -right-12 flex-col justify-between text-[8px] font-mono text-white/40 border-l border-sky-400/30 pl-1.5 pointer-events-none z-25 text-left">
         <span>600m</span>
         <span>500m</span>
         <span>400m</span>

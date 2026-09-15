@@ -10,13 +10,13 @@ export function ExplorationTab({
   gridData
 }) {
   return (
-    <div className="space-y-5 animate-in fade-in duration-300">
+    <div className="space-y-4 sm:space-y-5 animate-in fade-in duration-300">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-foreground flex items-center gap-2">
-            Module 1: Multi-Spectral Mineral Exploration & Satellite Reconnaissance
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-foreground flex items-center gap-2">
+            Module 1: Multi-Spectral Mineral Exploration & Reconnaissance
           </h2>
-          <p className="text-xs text-muted-foreground mt-0.5">
+          <p className="text-[11px] sm:text-xs text-muted-foreground mt-0.5">
             Fusing Google Earth Engine AlphaEarth 64-D Foundation Embeddings with Sentinel-1 SAR & Landsat-9 Thermal Flux.
           </p>
         </div>
@@ -31,16 +31,16 @@ export function ExplorationTab({
       />
 
       {/* Telemetry Cards Ribbon Below Visor */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
-        <Card className="p-4 bg-surface/70">
-          <div className="text-[10.5px] font-semibold text-muted-foreground uppercase font-mono">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5">
+        <Card className="p-3.5 sm:p-4 bg-surface/70">
+          <div className="text-[10px] sm:text-[10.5px] font-semibold text-muted-foreground uppercase font-mono">
             Active Concession
           </div>
-          <div className="text-sm font-bold font-mono text-foreground mt-1 flex items-center gap-1.5">
-            <MapPin className="h-4 w-4 text-primary" />
-            {activeTarget?.name}
+          <div className="text-xs sm:text-sm font-bold font-mono text-foreground mt-1 flex items-center gap-1.5 truncate">
+            <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary shrink-0" />
+            <span className="truncate">{activeTarget?.name}</span>
           </div>
-          <div className="text-xs text-sky-400 font-mono mt-1">
+          <div className="text-[11px] sm:text-xs text-sky-400 font-mono mt-0.5 sm:mt-1">
             {activeTarget?.lat.toFixed(4)}°N, {activeTarget?.lon.toFixed(4)}°E
           </div>
         </Card>

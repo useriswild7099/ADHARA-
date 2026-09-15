@@ -1,0 +1,16 @@
+{
+  "name": "adhara-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ADHARA - Multimodal Satellite Remote Sensing & Production Optimization Platform (SIH26009)",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "start": "npm --prefix frontend run preview",
+    "benchmark": "node benchmark.js"
+  },
+  "workspaces": [
+    "frontend"
+  ]
+}

@@ -60,25 +60,25 @@ export function ForecastTab({
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5">
         {/* Left 2 Cols: Interactive Recharts Forecast Curve */}
-        <Card className="p-5 lg:col-span-2 bg-surface/80">
-          <div className="flex items-center justify-between mb-4">
-            <span className="text-xs font-bold text-foreground uppercase tracking-wider font-mono">
-              6-Month Trajectory vs 90% Safe Target ({threshold.toLocaleString()} t)
+        <Card className="p-3.5 sm:p-5 lg:col-span-2 bg-surface/80">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 sm:mb-4">
+            <span className="text-[11px] sm:text-xs font-bold text-foreground uppercase tracking-wider font-mono">
+              6-Month Trajectory vs Safe Target ({threshold.toLocaleString()} t)
             </span>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 self-start sm:self-auto">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-[10.5px] font-mono text-primary font-bold">MAE: 80 TONS (-85%)</span>
+              <span className="text-[10px] sm:text-[10.5px] font-mono text-primary font-bold">MAE: 80 TONS (-85%)</span>
             </div>
           </div>
 
-          <div className="h-72 w-full">
+          <div className="h-64 sm:h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={chartData} margin={{ top: 10, right: 20, left: 10, bottom: 5 }}>
+              <LineChart data={chartData} margin={{ top: 10, right: 15, left: -5, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#27272a" opacity={0.5} />
-                <XAxis dataKey="month" stroke="#71717a" fontSize={11} tickLine={false} />
-                <YAxis stroke="#71717a" fontSize={11} domain={[2400, 4200]} tickLine={false} />
+                <XAxis dataKey="month" stroke="#71717a" fontSize={10} tickLine={false} />
+                <YAxis stroke="#71717a" fontSize={10} domain={[2400, 4200]} tickLine={false} width={45} />
                 <Tooltip
                   contentStyle={{
                     backgroundColor: '#121215',
@@ -88,12 +88,12 @@ export function ForecastTab({
                     fontFamily: 'monospace'
                   }}
                 />
-                <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
+                <Legend wrapperStyle={{ fontSize: '10px', paddingTop: '8px' }} />
                 <ReferenceLine
                   y={threshold}
                   stroke="#ef4444"
                   strokeDasharray="4 4"
-                  label={{ value: 'Safe Threshold', fill: '#ef4444', fontSize: 10 }}
+                  label={{ value: 'Safe Threshold', fill: '#ef4444', fontSize: 9 }}
                 />
                 <Line
                   type="monotone"
@@ -133,7 +133,7 @@ export function ForecastTab({
             </ResponsiveContainer>
           </div>
 
-          <div className="mt-4 p-3 rounded-lg bg-zinc-900/60 border border-white/5 flex items-center justify-between text-xs font-mono">
+          <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-lg bg-zinc-900/60 border border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-mono">
             <span className="text-zinc-400">Baseline Error: <b>527 tons MAE</b></span>
             <span className="text-primary font-bold">Causal Model Error: <b>80 tons MAE</b></span>
             <span className="text-emerald-400 font-bold">Net Error Reduction: <b>+84.8%</b></span>
@@ -141,7 +141,7 @@ export function ForecastTab({
         </Card>
 
         {/* Right Col: Live What-If Sliders */}
-        <Card className="p-5 bg-surface/80 flex flex-col justify-between">
+        <Card className="p-3.5 sm:p-5 bg-surface/80 flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-2 text-xs font-bold text-sky-400 uppercase tracking-wider mb-3">
               <Sliders className="h-4 w-4" />
@@ -223,40 +223,42 @@ export function ForecastTab({
       </div>
 
       {/* Forward 6-Month Projection Table */}
-      <Card className="p-5 bg-surface/80">
+      <Card className="p-3.5 sm:p-5 bg-surface/80">
         <div className="text-xs font-bold text-foreground uppercase tracking-wider font-mono mb-3">
           Forward 6-Month Projection Telemetry Table
         </div>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Month</TableHead>
-              <TableHead>Baseline (Holt-Winters)</TableHead>
-              <TableHead>Causal AI (Base)</TableHead>
-              <TableHead>Simulated Tonnage</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Trigger Diagnosis</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow key={row.month}>
-                <TableCell className="font-bold">Month {row.month}</TableCell>
-                <TableCell className="text-muted-foreground">{row.baselineForecast.toLocaleString()} t</TableCell>
-                <TableCell className="text-sky-400 font-bold">{row.regressionForecast.toLocaleString()} t</TableCell>
-                <TableCell className="text-foreground font-bold">{row.simulatedForecast.toLocaleString()} t</TableCell>
-                <TableCell>
-                  {row.shortfallRisk ? (
-                    <Badge variant="destructive">Deficit (-{row.deficitTons} t)</Badge>
-                  ) : (
-                    <Badge variant="success">Cleared (+{row.simulatedForecast - threshold} t)</Badge>
-                  )}
-                </TableCell>
-                <TableCell className="text-zinc-400">{row.trigger}</TableCell>
+        <div className="overflow-x-auto touch-scroll">
+          <Table className="min-w-[600px]">
+            <TableHeader>
+              <TableRow>
+                <TableHead>Month</TableHead>
+                <TableHead>Baseline (Holt-Winters)</TableHead>
+                <TableHead>Causal AI (Base)</TableHead>
+                <TableHead>Simulated Tonnage</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Trigger Diagnosis</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow key={row.month}>
+                  <TableCell className="font-bold whitespace-nowrap">Month {row.month}</TableCell>
+                  <TableCell className="text-muted-foreground whitespace-nowrap">{row.baselineForecast.toLocaleString()} t</TableCell>
+                  <TableCell className="text-sky-400 font-bold whitespace-nowrap">{row.regressionForecast.toLocaleString()} t</TableCell>
+                  <TableCell className="text-foreground font-bold whitespace-nowrap">{row.simulatedForecast.toLocaleString()} t</TableCell>
+                  <TableCell className="whitespace-nowrap">
+                    {row.shortfallRisk ? (
+                      <Badge variant="destructive">Deficit (-{row.deficitTons} t)</Badge>
+                    ) : (
+                      <Badge variant="success">Cleared (+{row.simulatedForecast - threshold} t)</Badge>
+                    )}
+                  </TableCell>
+                  <TableCell className="text-zinc-400 whitespace-nowrap">{row.trigger}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </Card>
     </div>
   );

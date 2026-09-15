@@ -52,27 +52,27 @@ export function PlaybookTab({ simData }) {
             .map((r) => (
               <Card
                 key={r.month}
-                className="p-5 border-l-4 border-l-destructive bg-surface/70 space-y-3"
+                className="p-3.5 sm:p-5 border-l-4 border-l-destructive bg-surface/70 space-y-3"
               >
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="flex items-center gap-2">
-                    <AlertOctagon className="h-5 w-5 text-destructive" />
-                    <span className="text-sm font-bold text-foreground font-mono">
-                      Month {r.month}: Projected Output {r.simulatedForecast.toLocaleString()} tons
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                    <AlertOctagon className="h-4 w-4 sm:h-5 sm:w-5 text-destructive shrink-0" />
+                    <span className="text-xs sm:text-sm font-bold text-foreground font-mono">
+                      Month {r.month}: {r.simulatedForecast.toLocaleString()} t
                     </span>
-                    <span className="text-xs text-destructive font-mono font-semibold">
+                    <span className="text-[11px] sm:text-xs text-destructive font-mono font-semibold">
                       (Deficit: -{r.deficitTons.toLocaleString()} t)
                     </span>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="self-start sm:self-auto">
                     {r.trigger.includes('Monsoon') ? (
-                      <Badge variant="destructive" className="flex items-center gap-1">
-                        <CloudRain className="h-3 w-3" />
+                      <Badge variant="destructive" className="flex items-center gap-1 text-[10px] sm:text-xs">
+                        <CloudRain className="h-3 w-3 shrink-0" />
                         Monsoon Surge ({r.rainfallMm} mm)
                       </Badge>
                     ) : (
-                      <Badge variant="warning" className="flex items-center gap-1">
-                        <Wrench className="h-3 w-3" />
+                      <Badge variant="warning" className="flex items-center gap-1 text-[10px] sm:text-xs">
+                        <Wrench className="h-3 w-3 shrink-0" />
                         Fleet Bottleneck ({r.downtimeHours} hrs)
                       </Badge>
                     )}

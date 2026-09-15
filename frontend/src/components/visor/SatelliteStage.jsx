@@ -80,19 +80,21 @@ export function SatelliteStage({
   useEffect(() => {
     if (!isActive || !mapInstanceRef.current) return;
 
-    const timer1 = setTimeout(() => {
+    const handleResize = () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.invalidateSize();
       }
-    }, 50);
+    };
 
-    const timer2 = setTimeout(() => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.invalidateSize();
-      }
-    }, 300);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+
+    const timer1 = setTimeout(handleResize, 50);
+    const timer2 = setTimeout(handleResize, 300);
 
     return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
       clearTimeout(timer1);
       clearTimeout(timer2);
     };
