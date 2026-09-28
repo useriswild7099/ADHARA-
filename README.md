@@ -1,6 +1,5 @@
 # ADHARA: Multimodal Satellite Remote Sensing & Production Optimization Platform
 ### Critical Mineral Exploration, Pit Dynamics Tracking & Causal Shortfall Forecasting
-**Project Code:** SIH26009 | **Organization:** MOIL Limited (Ministry of Steel, Govt. of India)  
 **Domain:** Space Technology & Geospatial Artificial Intelligence  
 **Live Production URL:** [https://adhara-seven.vercel.app/](https://adhara-seven.vercel.app/) | **Repository:** [github.com/useriswild7099/ADHARA-](https://github.com/useriswild7099/ADHARA-)
 
