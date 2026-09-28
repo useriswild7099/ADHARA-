@@ -4,7 +4,6 @@
 **Live Production URL:** [https://adhara-seven.vercel.app/](https://adhara-seven.vercel.app/) | **Repository:** [github.com/useriswild7099/ADHARA-](https://github.com/useriswild7099/ADHARA-)
 
 [![Deploy with Vercel](https://vercelbadge.vercel.app/api/useriswild7099/ADHARA-)](https://adhara-seven.vercel.app/)
-[![License: Proprietary](https://img.shields.io/badge/License-MOIL%20SIH26009-blue.svg)](https://github.com/useriswild7099/ADHARA-)
 [![Platform: WebGL%20%7C%20Three.js](https://img.shields.io/badge/Engine-WebGL%20%7C%20Three.js-00d4ff.svg)](https://adhara-seven.vercel.app/)
 [![Mobile: Responsive](https://img.shields.io/badge/Mobile-100%25%20Fluid%20HUD-emerald.svg)](https://adhara-seven.vercel.app/)
 
